@@ -57,11 +57,11 @@ Sample.new.version
 
 or
 
-Object.new.himekuri
+Object.new.himekuri_print
 
-Object.new.count
+Object.new.count_print
 
-Object.new.reiwa
+Object.new.reiwa_print
 
 Object.new.version
 
@@ -74,6 +74,20 @@ Object.new.version
 令和2年1月2日 R02.01.02
 
 日めくりの数え番号 : 0.1.1
+
+or web application
+
+Example
+
+@himekuri = Object.new.himekuri
+@count = Object.new.count
+@reiwa = Object.new.reiwa
+
+call
+
+<%= @himekuri =>
+...etc
+
 ```
 
 ## Contributing
