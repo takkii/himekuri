@@ -20,9 +20,47 @@ Or install it yourself as:
 
     $ gem install himekuri
 
-## Usage
+## Example Usage
 
-TODO: Write usage instructions here
+```ruby
+
+class Sample
+	def Sample.ruby
+		puts "Hello, himekuri"
+	end
+end
+
+Sample.ruby
+
+-- output --
+
+Hello, himekuri
+
+```
+
+how to use.
+
+```markdown
+# -- himekuri --
+
+Sample.new.himekuri
+
+Sample.new.count
+
+Sample.new.reiwa
+
+Sample.new.version
+
+# -- himekuri output --
+
+時刻を表示:2020年01月02日 11時46分31秒
+
+来年の1月1日まであと: 364 日です
+
+令和2年1月2日 R02.01.02
+
+日めくりの数え番号 : 0.1.1
+```
 
 ## Development
 
