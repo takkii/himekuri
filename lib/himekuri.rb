@@ -84,30 +84,3 @@ class Object
   	puts Himekuri::VERSION
   end
 end
-
-class Webms
-
-  def reiwa
-    td = Date.today
-    #nen = %w(平成 令和)
-    #2019/5/1以降
-    #if ("#{td.year}".to_s+"#{td.month}".to_s).match?(/^20201$/)
-    #  (nen[1] + "#{(td.year - 2018)}年"+"#{td.month}月"+"#{td.day}日")
-    #else
-    #  (nen[1] + "#{(td.year - 2018)}年".gsub(/[1]/,"元")+"#{td.month}月"+"#{td.day}日")
-    #end
-
-    #2020/1/1以降
-    nen = %w(令和)
-    (nen[0] + "#{(td.year - 2018)}年"+"#{td.month}月"+"#{td.day}日")
-  end
-
-  def count
-    t = Time.new
-    x = Time.mktime(t.year, t.month, t.day)
-    y = Time.mktime(t.year + 1, 1, 1)
-
-    # 1years 365 days.
-    '来年の1月1日まであと: ' + (((y - x) / 60 / 60 / 24) - 1).round.to_s + ' 日です'
-  end
-end
