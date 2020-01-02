@@ -55,6 +55,16 @@ Sample.new.reiwa
 
 Sample.new.version
 
+or
+
+Object.new.himekuri
+
+Object.new.count
+
+Object.new.reiwa
+
+Object.new.version
+
 # -- himekuri output --
 
 時刻を表示:2020年01月02日 11時46分31秒
