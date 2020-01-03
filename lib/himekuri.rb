@@ -49,7 +49,7 @@ class Object
     puts (nen[0] + "#{(td.year - 2018)}年" + "#{td.month}月" + "#{td.day}日") + ' ' + t.to_date.jisx0301
   end
 
-    def reiwa
+  def reiwa
     td = Date.today
     #nen = %w(平成 令和)
     #2019/5/1以降
@@ -65,7 +65,6 @@ class Object
   end
 
   def himekuri
-    '時刻を表示:'
     t = Time.new # 今日の日付と時刻
     t.strftime('%Y年%m月%d日 %H時%M分%S秒').to_s
   end
