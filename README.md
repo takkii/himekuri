@@ -13,7 +13,19 @@
 Gemfile:
 
 ```ruby
+
+[ Gemfile ]
+
+
 gem 'himekuri'
+
+
+-- Or HEAD install --
+
+source "https://rubygems.pkg.github.com/takkii" do
+  gem "himekuri", "0.1.2"
+end
+
 ```
 
 And then execute:
@@ -24,14 +36,18 @@ Or install it yourself as:
 
     $ gem install himekuri
 
+Or GitHub package install
+
+    $ gem install himekuri --version "0.1.2" --source "https://rubygems.pkg.github.com/takkii"
+
 ## Example Usage
 
 ```ruby
 
 class Sample
-	def Sample.ruby
-		puts "Hello, himekuri"
-	end
+  def Sample.ruby
+    puts "Hello, himekuri"
+  end
 end
 
 Sample.ruby
@@ -45,17 +61,8 @@ Hello, himekuri
 how to use.
 
 ```markdown
+
 # -- himekuri --
-
-Sample.new.himekuri
-
-Sample.new.count
-
-Sample.new.reiwa
-
-Sample.new.version
-
-or
 
 Object.new.himekuri_print
 
@@ -75,7 +82,7 @@ Object.new.version
 
 日めくりの数え番号 : 0.1.1
 
-or web application
+# -- web application --
 
 Example
 
@@ -86,7 +93,10 @@ Example
 call
 
 <%= @himekuri =>
-...etc
+<%= @count =>
+<%= @reiwa =>
+
+# -- himekuri done --
 
 ```
 
