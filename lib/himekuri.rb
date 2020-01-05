@@ -79,7 +79,7 @@ class Object
   end
 
   def version
-  	print '日めくりの数え番号 : '
-  	puts Himekuri::VERSION
+    print '日めくりの数え番号 : '
+    puts Himekuri::VERSION
   end
 end
