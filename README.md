@@ -42,22 +42,6 @@ Or GitHub package install
 
 ## Example Usage
 
-```ruby
-
-class Sample
-  def Sample.ruby
-    puts "Hello, himekuri"
-  end
-end
-
-Sample.ruby
-
--- output --
-
-Hello, himekuri
-
-```
-
 how to use.
 
 ```markdown
