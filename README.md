@@ -2,7 +2,7 @@
 
 # Himekuri
 
-日めくりは、zinbeiのlib/datetime.rbにあるコードをまとめたものです。
+日めくりは、zinbeiのlib/zinbei/datetime.rbにあるコードをまとめたものです。
 
 私物の日付周りは、こちらから参照するようにします。
 
@@ -41,8 +41,6 @@ Or GitHub package install
     $ gem install himekuri --version "0.1.2" --source "https://rubygems.pkg.github.com/takkii"
 
 ## Example Usage
-
-how to use.
 
 ```markdown
 
