@@ -46,7 +46,7 @@ class Object
     # end
 
     # 2020/1/1以降
-    puts (nen[0] + "#{(td.year - 2018)}年" + "#{td.month}月" + "#{td.day}日") + ' ' + t.to_date.jisx0301
+    puts (nen[0] + "#{(td.year - 2018)}年" + "#{td.month}月" + "#{td.day}日") + ' : ' + t.to_date.jisx0301
   end
 
   def reiwa
