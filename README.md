@@ -36,9 +36,9 @@ Or install it yourself as:
 
     $ gem install himekuri
 
-Or GitHub package install
+Or GitHub package install use head
 
-    $ gem install himekuri --version "0.1.2" --source "https://rubygems.pkg.github.com/takkii"
+    $ gem install himekuri --version "0.1.3.alpha.1" --source "https://rubygems.pkg.github.com/takkii"
 
 ## Example Usage
 
