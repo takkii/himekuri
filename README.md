@@ -20,10 +20,10 @@ Gemfile:
 gem 'himekuri'
 
 
--- Or HEAD install --
+-- HEAD install --
 
 source "https://rubygems.pkg.github.com/takkii" do
-  gem "himekuri", "0.1.2"
+  gem "himekuri", "0.1.3.alpha.1"
 end
 
 ```
@@ -32,13 +32,27 @@ And then execute:
 
     $ bundle install
 
-Or install it yourself as:
+Install it yourself as:
 
     $ gem install himekuri
 
-Or GitHub package install use head
+GitHub package install use head
 
     $ gem install himekuri --version "0.1.3.alpha.1" --source "https://rubygems.pkg.github.com/takkii"
+
+If install failed case
+
+[himekuri/github page](https://github.com/takkii/himekuri/packages/97408?version=0.1.3.alpha.1)
+
+```markdown
+
+himekuri-0.1.3.alpha.1.gem right icon click
+
+cd downloads
+
+gem install himekuri -v 0.1.3.alpha.1
+
+```
 
 ## Example Usage
 
