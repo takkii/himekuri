@@ -46,7 +46,11 @@ If install failed case
 
 ```markdown
 
-himekuri-0.1.3.alpha.1.gem right icon click
+GitHub page right down category
+
+here himekuri-0.1.3.alpha.1.gem
+
+( left file icon click )
 
 cd downloads
 
