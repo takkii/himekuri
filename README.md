@@ -46,7 +46,11 @@ If install failed case
 
 ```markdown
 
-himekuri-0.1.3.alpha.1.gem right icon click
+GitHub page right down category
+
+here himekuri-0.1.3.alpha.1.gem
+
+( left file icon click )
 
 cd downloads
 
@@ -70,10 +74,10 @@ Object.new.version
 
 # -- himekuri output --
 
-時刻を表示:2020年01月12日 11時21分37秒
-来年の1月1日まであと: 354 日です
-令和2年1月12日 : R02.01.12
-日めくりの数え番号 : 0.1.3.alpha.1
+時刻を表示:2020年01月07日 15時01分57秒
+来年の1月1日まであと: 359 日です
+令和2年1月7日 R02.01.07
+日めくりの数え番号 : 0.1.2
 
 # -- web application --
 
