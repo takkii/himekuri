@@ -9,7 +9,7 @@ class HimekuriTest < Minitest::Test
 
   def setup
     @version = Himekuri::VERSION
-    @versions = '0.1.2'
+    @versions = '0.1.3.alpha.1'
     @after = Time.new.strftime('%Y年%m月%d日　%H時%M分%S秒')
     @before = Time.now.strftime('%Y年%m月%d日　%H時%M分%S秒')
   end
