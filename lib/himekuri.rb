@@ -9,7 +9,7 @@ class Object
   def himekuri_print
     print '時刻を表示:'
     t = Time.new # 今日の日付と時刻
-    puts t.strftime('%Y年%m月%d日 %H時%M分%S秒')
+    puts t.strftime('%Y年%m月%d日：%H時%M分%S秒')
   end
 
   def count_print
@@ -66,7 +66,7 @@ class Object
 
   def himekuri
     t = Time.new # 今日の日付と時刻
-    t.strftime('%Y年%m月%d日 %H時%M分%S秒').to_s
+    t.strftime('%Y年%m月%d日：%H時%M分%S秒').to_s
   end
 
   def count
