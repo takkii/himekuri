@@ -20,10 +20,10 @@ Gemfile:
 gem 'himekuri'
 
 
--- Or HEAD install --
+-- HEAD install --
 
 source "https://rubygems.pkg.github.com/takkii" do
-  gem "himekuri", "0.1.2"
+  gem "himekuri", "0.1.3.alpha.1"
 end
 
 ```
@@ -32,13 +32,31 @@ And then execute:
 
     $ bundle install
 
-Or install it yourself as:
+Install it yourself as:
 
     $ gem install himekuri
 
-Or GitHub package install
+GitHub package install use head
 
-    $ gem install himekuri --version "0.1.2" --source "https://rubygems.pkg.github.com/takkii"
+    $ gem install himekuri --version "0.1.3.alpha.1" --source "https://rubygems.pkg.github.com/takkii"
+
+If install failed case
+
+[himekuri/github page](https://github.com/takkii/himekuri/packages/97408?version=0.1.3.alpha.1)
+
+```markdown
+
+GitHub page right down category
+
+here himekuri-0.1.3.alpha.1.gem
+
+( left file icon click )
+
+cd downloads
+
+gem install himekuri -v 0.1.3.alpha.1
+
+```
 
 ## Example Usage
 
@@ -56,10 +74,10 @@ Object.new.version
 
 # -- himekuri output --
 
-時刻を表示:2020年01月07日 15時01分57秒
-来年の1月1日まであと: 359 日です
-令和2年1月7日 R02.01.07
-日めくりの数え番号 : 0.1.2
+時刻を表示:2020年01月12日 13時21分59秒
+来年の1月1日まであと: 354 日です
+令和2年1月12日 : R02.01.12
+日めくりの数え番号 : 0.1.3.alpha.1
 
 # -- web application --
 
