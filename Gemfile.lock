@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    himekuri (0.1.3)
+    himekuri (0.1.4)
 
 GEM
   remote: https://rubygems.org/
   specs:
     ansi (1.5.0)
     builder (3.2.4)
-    minitest (5.14.0)
+    minitest (5.14.1)
     minitest-reporters (1.4.2)
       ansi
       builder
@@ -28,4 +28,4 @@ DEPENDENCIES
   rake (~> 12.0)
 
 BUNDLED WITH
-   2.1.2
+   2.1.4
