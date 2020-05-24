@@ -4,7 +4,7 @@ require 'date'
 require 'time'
 require 'himekuri/version'
 
-class Object
+class HimekuriClass
 
   def himekuri_print
     print '時刻を表示:'
