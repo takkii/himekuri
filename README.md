@@ -93,11 +93,12 @@ HimekuriClass.new.version
 
 # -- web application --
 
-Example
+Example [ GitHub 0.1.4 ]
+Object → HimekuriClass
 
-@himekuri = Object.new.himekuri
-@count = Object.new.count
-@reiwa = Object.new.reiwa
+@himekuri = HimekuriClass.new.himekuri
+@count = HimekuriClass.new.count
+@reiwa = HimekuriClass.new.reiwa
 
 call
 
