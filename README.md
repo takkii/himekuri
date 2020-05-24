@@ -64,6 +64,8 @@ gem install himekuri -v 0.1.3.alpha.1
 
 # -- himekuri --
 
+[0.1.3] → zinbei [1.5.3]
+
 Object.new.himekuri_print
 
 Object.new.count_print
@@ -71,6 +73,16 @@ Object.new.count_print
 Object.new.reiwa_print
 
 Object.new.version
+
+[0.1.4] → zinbei [1.5.4 (GitHub)]
+
+HimekuriClass.new.himekuri_print
+
+HimekuriClass.new.count_print
+
+HimekuriClass.new.reiwa_print
+
+HimekuriClass.new.version
 
 # -- himekuri output --
 
