@@ -64,7 +64,7 @@ gem install himekuri -v 0.1.3.alpha.1
 
 # -- himekuri --
 
-[0.1.3] → zinbei [1.5.3]
+[ ~ 0.1.3 ] → zinbei [ 1.5.3 ]
 
 Object.new.himekuri_print
 
@@ -74,7 +74,7 @@ Object.new.reiwa_print
 
 Object.new.version
 
-[0.1.4] → zinbei [1.5.4 (GitHub)]
+[ 0.1.4 ] → zinbei [ 1.5.4 ]
 
 HimekuriClass.new.himekuri_print
 
@@ -86,19 +86,25 @@ HimekuriClass.new.version
 
 # -- himekuri output --
 
-時刻を表示:2020年01月12日 13時21分59秒
-来年の1月1日まであと: 354 日です
-令和2年1月12日 : R02.01.12
-日めくりの数え番号 : 0.1.3.alpha.1
+時刻を表示:2020年05月24日：15時44分12秒
+来年の1月1日まであと: 221 日です
+令和2年5月24日 : R02.05.24
+日めくりの数え番号 : 0.1.4
 
 # -- web application --
 
-Example [ GitHub 0.1.4 ]
+Example [ 0.1.4 ]
 Object → HimekuriClass
 
 @himekuri = HimekuriClass.new.himekuri
 @count = HimekuriClass.new.count
 @reiwa = HimekuriClass.new.reiwa
+
+Example [ ~ 0.1.3 ]
+
+@himekuri = Object.new.himekuri
+@count = Object.new.count
+@reiwa = Object.new.reiwa
 
 call
 
