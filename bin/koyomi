@@ -1,0 +1,57 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# vim: filetype=ruby
+
+lib = File.expand_path('lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'himekuri'
+require 'himekuri/version'
+require 'himekuri2'
+
+# Zinbei module
+module Himekuri
+  module_function
+
+  def version
+    HimekuriClass.new.versio
+  end
+
+  def reiwa
+	HimekuriClass.new.reiwa_print
+  end
+
+  def koyomi
+	HimekuriClass.new.himekuri_print
+  end
+
+  def count
+	HimekuriClass.new.count_print
+  end
+end
+
+v = /\A[-][v]\z/
+r = /\A[-][r]\z/
+k = /\A[-][k]\z/
+c = /\A[-][c]\z/
+
+one = ARGV[0]
+
+include Himekuri
+
+if one.nil?
+  Himekuri.new.cal
+elsif one.match?(v)
+    version
+elsif one.match?(r)
+	reiwa
+elsif one.match?(k)
+	koyomi
+elsif one.match?(c)
+	count
+else
+  puts 'そのオプションは存在しないかなどでbacktraceが流れています ! '
+end
+
+__END__
