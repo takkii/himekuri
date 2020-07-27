@@ -13,26 +13,23 @@ module Koyomi
   module_function
 
   def version
-    HimekuriClass.new.versio
+	require 'himekuri'
   end
 
   def reiwa
-	HimekuriClass.new.reiwa_print
+	require 'himekuri'
   end
 
   def koyomi
-	HimekuriClass.new.himekuri_print
+	require 'himekuri'
   end
 
   def count
-	HimekuriClass.new.count_print
+	require 'himekuri'
   end
 
   def start
-	HimekuriClass.new.himekuri_print
-	HimekuriClass.new.count_print
-	HimekuriClass.new.reiwa_print
-	HimekuriClass.new.version
+	require 'himekuri'
   end
 end
 
@@ -46,15 +43,18 @@ one = ARGV[0]
 include Koyomi
 
 if one.nil?
-    start
+	HimekuriClass.new.himekuri_print
+	HimekuriClass.new.count_print
+	HimekuriClass.new.reiwa_print
+	HimekuriClass.new.version
 elsif one.match?(v)
-    version
+	HimekuriClass.new.version
 elsif one.match?(r)
-	reiwa
+	HimekuriClass.new.reiwa_print
 elsif one.match?(k)
-	koyomi
+	HimekuriClass.new.himekuri_print
 elsif one.match?(c)
-	count
+	HimekuriClass.new.count_print
 else
   puts 'そのオプションは存在しないかなどでbacktraceが流れています ! '
 end
