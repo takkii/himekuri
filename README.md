@@ -81,16 +81,9 @@ HimekuriClass.new.reiwa_print
 
 HimekuriClass.new.version
 
-# -- himekuri output --
-
-時刻を表示:2020 年 05 月 24 日：15 時 44 分 12 秒
-来年の 1 月 1 日まであと: 221 日です
-令和 2 年 5 月 24 日 : R02.05.24
-日めくりの数え番号 : 0.1.4
-
 # -- web application --
 
-Example [ 0.1.4 ]
+Example [ 0.1.4 ~ ]
 Object → HimekuriClass
 
 @himekuri = HimekuriClass.new.himekuri
@@ -103,7 +96,7 @@ Example [ ~ 0.1.3 ]
 @count = Object.new.count
 @reiwa = Object.new.reiwa
 
-call
+use Rails / Sinatra
 
 <%= @himekuri =>
 <%= @count =>
@@ -113,22 +106,22 @@ call
 
 koyomi
 
-時刻を表示:2020 年 07 月 27 日：18 時 01 分 43 秒
-来年の 1 月 1 日まであと: 157 日です
-令和 2 年 7 月 27 日 : R02.07.27
+時刻を表示:2020年07月27日：18時15分13秒
+来年の1月1日まであと: 157 日です
+令和2年7月27日 : R02.07.27
 日めくりの数え番号 : 0.1.5
 
 koyomi -r
 
-令和 2 年 7 月 27 日 : R02.07.27
+令和2年7月27日 : R02.07.27
 
 koyomi -k
 
-時刻を表示:2020 年 07 月 27 日：18 時 01 分 48 秒
+時刻を表示:2020年07月27日：18時15分20秒
 
 koyomi -c
 
-来年の 1 月 1 日まであと: 157 日です
+来年の1月1日まであと: 157 日です
 
 koyomi -v
 
