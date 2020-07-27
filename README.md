@@ -2,7 +2,7 @@
 
 # Himekuri
 
-日めくりは、zinbeiのlib/zinbei/datetime.rbにあるコードをまとめたものです。
+日めくりは、zinbei の lib/zinbei/datetime.rb にあるコードをまとめたものです。
 
 私物の日付周りは、こちらから参照するようにします。
 
@@ -45,7 +45,6 @@ If install failed case
 [himekuri/github page](https://github.com/takkii/himekuri/packages/97408?version=0.1.3.alpha.1)
 
 ```markdown
-
 GitHub page right down category
 
 here himekuri-0.1.3.alpha.1.gem
@@ -55,13 +54,11 @@ here himekuri-0.1.3.alpha.1.gem
 cd downloads
 
 gem install himekuri -v 0.1.3.alpha.1
-
 ```
 
 ## Example Usage
 
 ```markdown
-
 # -- himekuri --
 
 [ ~ 0.1.3 ] → zinbei [ 1.5.3 ]
@@ -86,9 +83,9 @@ HimekuriClass.new.version
 
 # -- himekuri output --
 
-時刻を表示:2020年05月24日：15時44分12秒
-来年の1月1日まであと: 221 日です
-令和2年5月24日 : R02.05.24
+時刻を表示:2020 年 05 月 24 日：15 時 44 分 12 秒
+来年の 1 月 1 日まであと: 221 日です
+令和 2 年 5 月 24 日 : R02.05.24
 日めくりの数え番号 : 0.1.4
 
 # -- web application --
@@ -112,14 +109,20 @@ call
 <%= @count =>
 <%= @reiwa =>
 
-# -- himekuri done --
+# -- koyomi shell start (0.1.5) --
 
+koyomi
+koyomi -r
+koyomi -k
+koyomi -c
+koyomi -v
+
+# -- himekuri done --
 ```
 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/takkii/himekuri. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/takkii/himekuri/blob/master/CODE_OF_CONDUCT.md).
-
 
 ## License
 
