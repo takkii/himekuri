@@ -6,32 +6,12 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
+Encoding.default_internal = 'UTF-8'
+
+begin
+
+require 'himekuri'
 require 'himekuri/version'
-
-# Zinbei module
-module Koyomi
-  module_function
-
-  def version
-	require 'himekuri'
-  end
-
-  def reiwa
-	require 'himekuri'
-  end
-
-  def koyomi
-	require 'himekuri'
-  end
-
-  def count
-	require 'himekuri'
-  end
-
-  def start
-	require 'himekuri'
-  end
-end
 
 v = /\A[-][v]\z/
 r = /\A[-][r]\z/
@@ -39,8 +19,6 @@ k = /\A[-][k]\z/
 c = /\A[-][c]\z/
 
 one = ARGV[0]
-
-include Koyomi
 
 if one.nil?
 	HimekuriClass.new.himekuri_print
@@ -58,5 +36,11 @@ elsif one.match?(c)
 else
   puts 'そのオプションは存在しないかなどでbacktraceが流れています ! '
 end
+
+rescue Exception => e
+	e.printStackTrace
+end
+
+GC.stress = true
 
 __END__
