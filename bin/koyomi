@@ -6,12 +6,11 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'himekuri'
-require 'himekuri/version'
 require 'himekuri2'
+require 'himekuri/version'
 
 # Zinbei module
-module Himekuri
+module Koyomi
   module_function
 
   def version
@@ -38,10 +37,10 @@ c = /\A[-][c]\z/
 
 one = ARGV[0]
 
-include Himekuri
+include Koyomi
 
 if one.nil?
-  Himekuri.new.cal
+    Himekuri.new.cal
 elsif one.match?(v)
     version
 elsif one.match?(r)
