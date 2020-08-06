@@ -65,7 +65,7 @@ gem install himekuri -v 0.1.3.alpha.1
 ```markdown
 # -- himekuri --
 
-〜 0.1.3 → zinbei 1.5.3
+〜 v0.1.3 → zinbei v1.5.3
 
 Object.new.himekuri_print
 
@@ -75,7 +75,7 @@ Object.new.reiwa_print
 
 Object.new.version
 
-0.1.4 → zinbei 1.5.4
+v0.1.4 → zinbei v1.5.4
 
 HimekuriClass.new.himekuri_print
 
@@ -87,7 +87,7 @@ HimekuriClass.new.version
 
 # -- web application --
 
-0.1.4 〜
+v0.1.4 〜
 
 Object → HimekuriClass
 
@@ -95,7 +95,7 @@ Object → HimekuriClass
 @count = HimekuriClass.new.count
 @reiwa = HimekuriClass.new.reiwa
 
-〜 0.1.3
+〜 v0.1.3
 
 @himekuri = Object.new.himekuri
 @count = Object.new.count
@@ -113,31 +113,23 @@ v0.1.5 〜
 
 koyomi
 
-時刻を表示:2020年07月27日：18時15分13秒
-来年の1月1日まであと: 157 日です
-令和2年7月27日 : R02.07.27
-日めくりの数え番号 : 0.1.5
+時刻を表示:2020年08月06日：14時32分26秒
+来年の1月1日まであと: 147 日です
+令和2年8月6日 : R02.08.06
+日めくりの数え番号 : 0.1.6
 
 koyomi -r
 
-令和2年7月27日 : R02.07.27
-
+時刻を表示:2020年08月06日：14時32分26秒
 koyomi -k
 
-時刻を表示:2020年07月27日：18時15分20秒
-
+来年の1月1日まであと: 147 日です
 koyomi -c
 
-来年の1月1日まであと: 157 日です
-
+令和2年8月6日 : R02.08.06
 koyomi -v
 
-日めくりの数え番号 : 0.1.5
-
-koyomi -h
-
-ヘルプページ、コマンド一覧
-
+日めくりの数え番号 : 0.1.6
 
 ----------------------------HELP----------------------------
 ```
