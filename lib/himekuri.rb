@@ -92,6 +92,7 @@ class HimekuriClass
     HimekuriClass.new.count_print
     HimekuriClass.new.reiwa_print
     HimekuriClass.new.version
+    puts ''
     puts 'koyomi -r'
     puts ''
     HimekuriClass.new.himekuri_print    
