@@ -85,13 +85,6 @@ HimekuriClass.new.reiwa_print
 
 HimekuriClass.new.version
 
-# -- himekuri output --
-
-時刻を表示:2020 年 05 月 24 日：15 時 44 分 12 秒
-来年の 1 月 1 日まであと: 221 日です
-令和 2 年 5 月 24 日 : R02.05.24
-日めくりの数え番号 : 0.1.4
-
 # -- web application --
 
 0.1.4 〜
@@ -108,7 +101,7 @@ Object → HimekuriClass
 @count = Object.new.count
 @reiwa = Object.new.reiwa
 
-call
+use Rails / Sinatra
 
 <%= @himekuri =>
 <%= @count =>
