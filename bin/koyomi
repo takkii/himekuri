@@ -17,6 +17,7 @@ v = /\A[-][v]\z/
 r = /\A[-][r]\z/
 k = /\A[-][k]\z/
 c = /\A[-][c]\z/
+h = /\A[-][h]\z/
 
 one = ARGV[0]
 
@@ -33,8 +34,10 @@ elsif one.match?(k)
 	HimekuriClass.new.himekuri_print
 elsif one.match?(c)
 	HimekuriClass.new.count_print
+elsif one.match?(h)
+	HimekuriClass.new.help
 else
-  puts 'そのオプションは存在しないかなどでbacktraceが流れています ! '
+  puts '実行中のコマンドは存在しません !'
 end
 
 rescue Exception => e
