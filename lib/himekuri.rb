@@ -109,5 +109,6 @@ class HimekuriClass
     HimekuriClass.new.help
     puts ''  
     puts 'HELP'.center(60, '-')
+    exit!
   end
 end
