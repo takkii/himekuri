@@ -95,13 +95,16 @@ class HimekuriClass
     puts ''
     puts 'koyomi -r'
     puts ''
-    HimekuriClass.new.himekuri_print    
+    HimekuriClass.new.himekuri_print
+    puts ''
     puts 'koyomi -k'
     puts ''
     HimekuriClass.new.count_print
+    puts ''
     puts 'koyomi -c'
     puts ''
     HimekuriClass.new.reiwa_print
+    puts ''
     puts 'koyomi -v'
     puts ''
     HimekuriClass.new.version
