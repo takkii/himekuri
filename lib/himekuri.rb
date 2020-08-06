@@ -82,4 +82,39 @@ class HimekuriClass
     print '日めくりの数え番号 : '
     puts Himekuri::VERSION
   end
+  
+  def help
+    puts 'HELP'.center(60, '-')
+
+    puts '
+koyomi
+
+時刻を表示:2020年07月27日：18時15分13秒
+来年の1月1日まであと: 157 日です
+令和2年7月27日 : R02.07.27
+日めくりの数え番号 : 0.1.5
+
+koyomi -r
+
+令和2年7月27日 : R02.07.27
+
+koyomi -k
+
+時刻を表示:2020年07月27日：18時15分20秒
+
+koyomi -c
+
+来年の1月1日まであと: 157 日です
+
+koyomi -v
+
+日めくりの数え番号 : 0.1.5
+
+koyomi -h
+
+ヘルプページ、コマンド一覧
+
+    '
+      puts 'HELP'.center(60, '-')
+  end
 end
