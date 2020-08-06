@@ -1,12 +1,16 @@
 [![Gem Version](https://badge.fury.io/rb/himekuri.png)](https://badge.fury.io/rb/himekuri)[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)![GitHub release](https://img.shields.io/github/release/takkii/himekuri.svg?style=flat)[![Build Status](https://travis-ci.org/takkii/himekuri.svg?branch=master)](https://travis-ci.org/takkii/himekuri)
 
-# Himekuri
+### 日めくりとは
 
-日めくりは、zinbei の lib/zinbei/datetime.rb にあるコードをまとめたものです。
+時刻表示に関するライブラリ群です。
 
-私物の日付周りは、こちらから参照するようにします。
+日本語で令和対応もしてあります。
 
-※ 特徴は、日本語であることです。
+#### 日めくりチャレンジ
+
+| [日めくり(Java)](https://github.com/takkii/himekuri_java) | [日めくり(C#)](https://github.com/takkii/himekuri_shaper) | [日めくり2(Ruby拡張C++)](https://github.com/takkii/himekuri2) | [日めくり(Scala)未完成](https://github.com/takkii/himekuriScala) | [日めくり(C++)](https://github.com/takkii/himekuri_c_plusplus) |
+
+_日めくりチャレンジと称して異なる言語で同じ時刻表示の出力結果を書きました。_
 
 ## Installation
 
@@ -61,7 +65,7 @@ gem install himekuri -v 0.1.3.alpha.1
 ```markdown
 # -- himekuri --
 
-[ ~ 0.1.3 ] → zinbei [ 1.5.3 ]
+〜 0.1.3 → zinbei 1.5.3
 
 Object.new.himekuri_print
 
@@ -71,7 +75,7 @@ Object.new.reiwa_print
 
 Object.new.version
 
-[ 0.1.4 ] → zinbei [ 1.5.4 ]
+0.1.4 → zinbei 1.5.4
 
 HimekuriClass.new.himekuri_print
 
@@ -83,14 +87,15 @@ HimekuriClass.new.version
 
 # -- web application --
 
-Example [ 0.1.4 ~ ]
+0.1.4 〜
+
 Object → HimekuriClass
 
 @himekuri = HimekuriClass.new.himekuri
 @count = HimekuriClass.new.count
 @reiwa = HimekuriClass.new.reiwa
 
-Example [ ~ 0.1.3 ]
+〜 0.1.3
 
 @himekuri = Object.new.himekuri
 @count = Object.new.count
@@ -102,7 +107,7 @@ use Rails / Sinatra
 <%= @count =>
 <%= @reiwa =>
 
-v0.1.5〜
+v0.1.5 〜
 
 ----------------------------HELP----------------------------
 
