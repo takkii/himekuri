@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in himekuri.gemspec
 gemspec
 
-gem 'minitest', '~> 5.0'
+gem 'bundler'
+gem 'minitest'
 gem 'minitest-reporters'
-gem 'rake', '~> 12.0'
+gem 'rake'
+gem 'rspec'

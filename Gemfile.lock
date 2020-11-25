@@ -1,20 +1,34 @@
 PATH
   remote: .
   specs:
-    himekuri (0.1.6)
+    himekuri (0.1.7)
 
 GEM
   remote: https://rubygems.org/
   specs:
     ansi (1.5.0)
     builder (3.2.4)
-    minitest (5.14.1)
+    diff-lcs (1.4.4)
+    minitest (5.14.2)
     minitest-reporters (1.4.2)
       ansi
       builder
       minitest (>= 5.0)
       ruby-progressbar
-    rake (12.3.3)
+    rake (13.0.1)
+    rspec (3.10.0)
+      rspec-core (~> 3.10.0)
+      rspec-expectations (~> 3.10.0)
+      rspec-mocks (~> 3.10.0)
+    rspec-core (3.10.0)
+      rspec-support (~> 3.10.0)
+    rspec-expectations (3.10.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-mocks (3.10.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-support (3.10.0)
     ruby-progressbar (1.10.1)
 
 PLATFORMS
@@ -22,10 +36,12 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bundler
   himekuri!
-  minitest (~> 5.0)
+  minitest
   minitest-reporters
-  rake (~> 12.0)
+  rake
+  rspec
 
 BUNDLED WITH
    2.1.4
