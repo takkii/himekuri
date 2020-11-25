@@ -84,7 +84,7 @@ class HimekuriClass
   end
 
   def version
-    print '日めくりの数え番号 : '
+    print '日めくり数え番号 : '
     puts Himekuri::VERSION
   end
   
