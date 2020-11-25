@@ -118,4 +118,4 @@ class HimekuriClass
   end
 end
 
-_END_
+__END__
