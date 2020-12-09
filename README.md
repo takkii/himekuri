@@ -8,7 +8,7 @@
 
 #### 日めくりチャレンジ
 
-| [日めくり(Java)](https://github.com/takkii/himekuri_java) | [日めくり(C#)](https://github.com/takkii/himekuri_shaper) | [日めくり2(Ruby拡張C++)](https://github.com/takkii/himekuri2) | [日めくり(Scala)未完成](https://github.com/takkii/himekuriScala) |
+| [日めくり(Java)](https://github.com/takkii/himekuri_java) | [日めくり(C#)](https://github.com/takkii/himekuri_shaper) | [日めくり2(Ruby拡張C++)](https://github.com/takkii/himekuri2) |
 |:---:|:---:|:---:|:---:|
 | [日めくり(C++)](https://github.com/takkii/himekuri_c_plusplus) | [日めくり(J++)](https://github.com/takkii/ConsoleJPlus) | [日めくり(TypeScript)](https://github.com/takkii/himekuri_ts) |
 
