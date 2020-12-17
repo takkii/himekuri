@@ -11,6 +11,7 @@
 | [日めくり(Java)](https://github.com/takkii/himekuri_java) | [日めくり(C#)](https://github.com/takkii/himekuri_shaper) | [日めくり2(Ruby拡張C++)](https://github.com/takkii/himekuri2) |
 |:---:|:---:|:---:|
 | [日めくり(C++)](https://github.com/takkii/himekuri_c_plusplus) | [日めくり(J++)](https://github.com/takkii/ConsoleJPlus) | [日めくり(TypeScript)](https://github.com/takkii/himekuri_ts) |
+|[日めくり(Go)](https://github.com/takkii/himekuri_go)|
 
 _日めくりチャレンジと称して異なる言語で同じ時刻表示の出力結果を書きました。_
 
