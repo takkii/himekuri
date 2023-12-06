@@ -12,6 +12,7 @@ begin
 
 require 'himekuri'
 require 'himekuri/version'
+require 'zella'
 
 v = /\A[-][v]\z/
 r = /\A[-][r]\z/
@@ -19,35 +20,37 @@ k = /\A[-][k]\z/
 c = /\A[-][c]\z/
 h = /\A[-][h]\z/
 w = /\A[-][w]\z/
+z = /\A[-][z]\z/
 
 one = ARGV[0]
 
-if one.nil?
-  HimekuriClass.new.himekuri_print
-  HimekuriClass.new.count_print
-  HimekuriClass.new.reiwa_print
-  HimekuriClass.new.version
-  HimekuriClass.new.wahugetsu_print
-elsif one.match?(v)
-  HimekuriClass.new.version
-elsif one.match?(r)
-  HimekuriClass.new.reiwa_print
-elsif one.match?(k)
-  HimekuriClass.new.himekuri_print
-elsif one.match?(c)
-  HimekuriClass.new.count_print
-elsif one.match?(h)
-  HimekuriClass.new.help
-elsif one.match?(w)
-  HimekuriClass.new.wahugetsu_print
-else
-  puts '実行中のコマンドは存在しません !'
-end
-
+  if one.nil?
+    HimekuriClass.new.himekuri_print
+    HimekuriClass.new.count_print
+    HimekuriClass.new.reiwa_print
+    HimekuriClass.new.version
+    HimekuriClass.new.wahugetsu_print
+  elsif one.match?(v)
+    HimekuriClass.new.version
+  elsif one.match?(r)
+    HimekuriClass.new.reiwa_print
+  elsif one.match?(k)
+    HimekuriClass.new.himekuri_print
+  elsif one.match?(c)
+    HimekuriClass.new.count_print
+  elsif one.match?(h)
+    HimekuriClass.new.help
+  elsif one.match?(w)
+    HimekuriClass.new.wahugetsu_print
+  elsif one.match?(z)
+    Zella.ruby
+  else
+    puts '実行中のコマンドは存在しません !'
+  end
 rescue Exception => e
-  e.printStackTrace
+  puts e.backtrace
+ensure
+    GC.compact
 end
-
-GC.stress = true
 
 __END__
