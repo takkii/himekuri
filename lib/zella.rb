@@ -5,7 +5,7 @@ class Zella
         # Today
         td = Date.today
 
-        if ARGV[0] == nil
+        if ARGV[1] == nil
             year = (td.year).to_i
             month = (td.month).to_i
             day = (td.day).to_i
