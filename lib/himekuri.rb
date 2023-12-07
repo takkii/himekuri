@@ -197,6 +197,7 @@ class HimekuriClass
     puts ''
     HimekuriClass.new.wahugetsu_print
     puts ''
+    puts 'koyomi -z'
     puts ''
     Zella.ruby
     puts ''
