@@ -15,6 +15,10 @@
 
 _日めくりチャレンジと称して異なる言語で同じ時刻表示の出力結果を書きました。_
 
-## License
+#### How to Use
+
+Wiki page, [here](https://github.com/takkii/himekuri/wiki/manual).
+
+### License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
