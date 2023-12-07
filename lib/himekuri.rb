@@ -25,9 +25,15 @@ class HimekuriClass
     y = Time.mktime(t.year + 1, 1, 1)
 
     # 1years 365 days.
-    print '来年の1月1日まであと: '
-    print (((y - x) / 60 / 60 / 24) - 1).round
-    puts ' 日です'
+    if ((((y - x) / 60 / 60 / 24) - 1).round).to_i == 0
+      puts '年の瀬、大晦日です！'
+    elsif ((((y - x) / 60 / 60 / 24) - 1).round).to_i == 1
+      puts '新年、明けましておめでとうございます！'
+    else
+      print '来年の1月1日まであと: '
+      print (((y - x) / 60 / 60 / 24) - 1).round
+      puts ' 日です'
+    end
   end
 
   def reiwa_print
@@ -121,7 +127,14 @@ class HimekuriClass
     y = Time.mktime(t.year + 1, 1, 1)
 
     # 1years 365 days.
-    '来年の1月1日まであと: ' + (((y - x) / 60 / 60 / 24) - 1).round.to_s + ' 日です'
+    # 1years 365 days.
+    if ((((y - x) / 60 / 60 / 24) - 1).round).to_i == 0
+      '年の瀬、大晦日です！'
+    elsif ((((y - x) / 60 / 60 / 24) - 1).round).to_i == 1
+      '新年、明けましておめでとうございます！'
+    else
+      '来年の1月1日まであと: ' + (((y - x) / 60 / 60 / 24) - 1).round.to_s + ' 日です'
+    end
   end
 
   def wahugetsu_web
