@@ -4,6 +4,7 @@
 require 'minitest'
 require 'minitest/autorun'
 require 'minitest/unit'
+require 'minitest/runner'
 require 'himekurits'
 require 'tanraku'
 # --------------------------------------
@@ -19,7 +20,6 @@ class MiniTestFile
   attr_reader :mini_test
 
   def initialize
-    require 'mini_auto_runner'
     @mini_test = Mini(true, '/GitHub/himekuri/test')
   end
 
