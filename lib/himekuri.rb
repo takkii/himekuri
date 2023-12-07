@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
+lib = File.expand_path('lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
 require 'date'
 require 'time'
 require 'himekuri/version'
+require 'zella'
 
 class HimekuriClass
 
@@ -51,11 +55,11 @@ class HimekuriClass
     # 2020/1/1以降
     puts (nen[0] + "#{(td.year - 2018)}年" + "#{td.month}月" + "#{td.day}日") + ' : ' + t.to_date.jisx0301
   end
-  
+
   def wahugetsu_print
     td = Date.today
     nen = %w[令和]
-    
+
     if td.month == 1
       puts (nen[0] + "#{(td.year - 2018)}年"+"#{td.month}月"+" : "+"睦月")
     elsif td.month == 2
@@ -85,7 +89,7 @@ class HimekuriClass
         raise "あり得ない数時の月です!"
       rescue => e
         puts e.cause.message
-      end 
+      end
     end
   end
 
@@ -98,7 +102,7 @@ class HimekuriClass
     #else
     #  (nen[1] + "#{(td.year - 2018)}年".gsub(/[1]/,"元")+"#{td.month}月"+"#{td.day}日")
     #end
-  
+
     #2020/1/1以降
     nen = %w(令和)
     (nen[0] + "#{(td.year - 2018)}年"+"#{td.month}月"+"#{td.day}日"+ %w(日 月 火 水 木 金 土)[td.wday] + "曜日" )
@@ -153,7 +157,7 @@ class HimekuriClass
         raise "あり得ない数時の月です!"
       rescue => e
         e.cause.message
-      end 
+      end
     end
   end
 
@@ -161,7 +165,7 @@ class HimekuriClass
     print '日めくり数え番号 : '
     puts Himekuri::VERSION
   end
-  
+
   def help
     puts 'HELP'.center(60, '-')
     puts ''
@@ -192,7 +196,10 @@ class HimekuriClass
     puts 'koyomi -w'
     puts ''
     HimekuriClass.new.wahugetsu_print
-    puts '' 
+    puts ''
+    puts ''
+    Zella.ruby
+    puts ''
     puts 'HELP'.center(60, '-')
   end
 end

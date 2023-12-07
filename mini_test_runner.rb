@@ -1,12 +1,9 @@
 # frozen_string_literal: true
 
-# frozen_string_literal: true
-
 # --------------------------------------
 require 'minitest'
 require 'minitest/autorun'
 require 'minitest/unit'
-require 'minitest/reporters'
 require 'himekurits'
 require 'tanraku'
 # --------------------------------------
@@ -23,7 +20,7 @@ class MiniTestFile
 
   def initialize
     require 'mini_auto_runner'
-    @mini_test = Mini_Runner(true, '/GitHub/himekuri/test')
+    @mini_test = Mini(true, '/GitHub/himekuri/test')
   end
 
   def remove
