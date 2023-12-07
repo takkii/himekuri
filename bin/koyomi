@@ -9,20 +9,19 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Encoding.default_internal = 'UTF-8'
 
 begin
+  require 'himekuri'
+  require 'himekuri/version'
+  require 'zella'
 
-require 'himekuri'
-require 'himekuri/version'
-require 'zella'
+  v = /\A-v\z/
+  r = /\A-r\z/
+  k = /\A-k\z/
+  c = /\A-c\z/
+  h = /\A-h\z/
+  w = /\A-w\z/
+  z = /\A-z\z/
 
-v = /\A[-][v]\z/
-r = /\A[-][r]\z/
-k = /\A[-][k]\z/
-c = /\A[-][c]\z/
-h = /\A[-][h]\z/
-w = /\A[-][w]\z/
-z = /\A[-][z]\z/
-
-one = ARGV[0]
+  one = ARGV[0]
 
   if one.nil?
     HimekuriClass.new.himekuri_print
@@ -50,7 +49,7 @@ one = ARGV[0]
 rescue Exception => e
   puts e.backtrace
 ensure
-    GC.compact
+  GC.compact
 end
 
 __END__

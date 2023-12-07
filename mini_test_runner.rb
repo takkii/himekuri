@@ -20,7 +20,7 @@ class MiniTestFile
   attr_reader :mini_test
 
   def initialize
-    @mini_test = Mini(true, '/GitHub/himekuri/test')
+    @mini_test = Mini(true, '/GitHub/himekuri/minitest')
   end
 
   def remove
