@@ -16,6 +16,6 @@ end
 # himekuri rake
 task default: [:test]
 Rake::TestTask.new do |mini_test|
-  mini_test.test_files = Dir['test/**/*_test.rb']
+  mini_test.test_files = Dir['minitest/**/*_test.rb']
   mini_test.verbose = true
 end
