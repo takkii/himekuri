@@ -1,4 +1,4 @@
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ### 日めくりとは
 
@@ -10,8 +10,7 @@
 
 | [日めくり(Java)](https://github.com/takkii/himekuri_java) | [日めくり(C#)](https://github.com/takkii/himekuri_shaper) | [日めくり2(Ruby拡張C++)](https://github.com/takkii/himekuri2) |
 |:---:|:---:|:---:|
-| [日めくり(C++)](https://github.com/takkii/himekuri_c_plusplus) | [日めくり(TypeScript)](https://github.com/takkii/himekuri_ts) |
-|[日めくり(Go)](https://github.com/takkii/himekuri_go)|[日めくり[rust]](https://github.com/takkii/himekuri_rust)|
+| [日めくり(C++)](https://github.com/takkii/himekuri_c_plusplus) | [日めくり(TypeScript)](https://github.com/takkii/himekuri_ts) | [日めくり(Go)](https://github.com/takkii/himekuri_go) | [日めくり[rust]](https://github.com/takkii/himekuri_rust) |
 
 _日めくりチャレンジと称して異なる言語で同じ時刻表示の出力結果を書きました。_
 
