@@ -211,7 +211,7 @@ class HimekuriClass
     puts ''
     puts 'koyomi -z'
     puts ''
-    Zella.ruby
+    Zella.formula
     puts ''
     puts 'HELP'.center(60, '-')
   end

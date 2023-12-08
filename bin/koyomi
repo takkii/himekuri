@@ -42,11 +42,11 @@ begin
   elsif one.match?(w)
     HimekuriClass.new.wahugetsu_print
   elsif one.match?(z)
-    Zella.ruby
+    Zella.formula
   else
     puts '実行中のコマンドは存在しません !'
   end
-rescue Exception => e
+rescue StandardError => e
   puts e.backtrace
 ensure
   GC.compact
