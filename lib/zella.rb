@@ -2,8 +2,9 @@
 
 require 'date'
 
+# zella  class.
 class Zella
-  def self.ruby
+  def self.formula
     # Today
     td = Date.today
 
@@ -20,19 +21,19 @@ class Zella
     # zella calc
     calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
 
-    if calc === 0
+    if calc.zero?
       puts "#{year}年#{month}月#{day}日 : 日曜日"
-    elsif calc === 1
+    elsif calc == 1
       puts "#{year}年#{month}月#{day}日 : 月曜日"
-    elsif calc === 2
+    elsif calc == 2
       puts "#{year}年#{month}月#{day}日 : 火曜日"
-    elsif calc === 3
+    elsif calc == 3
       puts "#{year}年#{month}月#{day}日 : 水曜日"
-    elsif calc === 4
+    elsif calc == 4
       puts "#{year}年#{month}月#{day}日 : 木曜日"
-    elsif calc === 5
+    elsif calc == 5
       puts "#{year}年#{month}月#{day}日 : 金曜日"
-    elsif calc === 6
+    elsif calc == 6
       puts "#{year}年#{month}月#{day}日 : 土曜日"
     else
       begin
