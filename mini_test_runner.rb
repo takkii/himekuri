@@ -1,13 +1,6 @@
 # frozen_string_literal: true
 
-# --------------------------------------
-require 'minitest'
-require 'minitest/autorun'
-require 'minitest/unit'
-require 'minitest/runner'
-require 'himekurits'
-require 'tanraku'
-# --------------------------------------
+require "#{File.dirname(__FILE__)}/req/minitest"
 
 # Default encoding utf8, Encoding change here.
 def encoding_style
