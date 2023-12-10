@@ -20,27 +20,13 @@ class Zella
 
     # zella calc
     calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
+    youbi = %w[日 月 火 水 木 金 土][calc]
 
-    if calc.zero?
-      puts "#{year}年#{month}月#{day}日 : 日曜日"
-    elsif calc == 1
-      puts "#{year}年#{month}月#{day}日 : 月曜日"
-    elsif calc == 2
-      puts "#{year}年#{month}月#{day}日 : 火曜日"
-    elsif calc == 3
-      puts "#{year}年#{month}月#{day}日 : 水曜日"
-    elsif calc == 4
-      puts "#{year}年#{month}月#{day}日 : 木曜日"
-    elsif calc == 5
-      puts "#{year}年#{month}月#{day}日 : 金曜日"
-    elsif calc == 6
-      puts "#{year}年#{month}月#{day}日 : 土曜日"
-    else
-      begin
-        raise 'あり得ない数 : 曜日の判定をしません。'
-      rescue StandardError => e
-        e.cause.message
-      end
+    # begin ~ rescue ~ ensure.
+    begin
+      puts "#{year}年#{month}月#{day}日 : #{youbi}曜日"
+    rescue StandardError => e
+      e.backtrace
     end
   end
 end
