@@ -168,7 +168,7 @@ class HimekuriClass
       begin
         raise 'あり得ない数時の月です!'
       rescue StandardError => e
-        e.cause.message
+        puts e.cause.message
       end
     end
   end
