@@ -26,7 +26,7 @@ class Zella
     begin
       puts "#{year}年#{month}月#{day}日 : #{youbi}曜日"
     rescue StandardError => e
-      e.backtrace
+      puts e.backtrace
     end
   end
 end
