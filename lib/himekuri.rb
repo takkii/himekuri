@@ -62,38 +62,16 @@ class HimekuriClass
   def wahugetsu_print
     td = Date.today
     nen = %w[令和]
+    nen_y = %w[無 睦月 如月 弥生 卯月 皐月 水無月 文月 葉月 長月 神無月 霜月 師走][td.month]
 
-    case td.month
-    when 1
-      puts("#{nen[0]}#{td.year - 2018}年#{td.month}月 : 睦月")
-    when 2
-      puts("#{nen[0]}#{td.year - 2018}年#{td.month}月 : 如月")
-    when 3
-      puts("#{nen[0]}#{td.year - 2018}年#{td.month}月 : 弥生")
-    when 4
-      puts("#{nen[0]}#{td.year - 2018}年#{td.month}月 : 卯月")
-    when 5
-      puts("#{nen[0]}#{td.year - 2018}年#{td.month}月 : 皐月")
-    when 6
-      puts("#{nen[0]}#{td.year - 2018}年#{td.month}月 : 水無月")
-    when 7
-      puts("#{nen[0]}#{td.year - 2018}年#{td.month}月 : 文月")
-    when 8
-      puts("#{nen[0]}#{td.year - 2018}年#{td.month}月 : 葉月")
-    when 9
-      puts("#{nen[0]}#{td.year - 2018}年#{td.month}月 : 長月")
-    when 10
-      puts("#{nen[0]}#{td.year - 2018}年#{td.month}月 : 神無月")
-    when 11
-      puts("#{nen[0]}#{td.year - 2018}年#{td.month}月 : 霜月")
-    when 12
-      puts("#{nen[0]}#{td.year - 2018}年#{td.month}月 : 師走")
-    else
-      begin
-        raise 'あり得ない数時の月です!'
-      rescue StandardError => e
-        puts e.cause.message
+    begin
+      if ("#{td.month}".to_i).zero?
+        raise '「無」に辿り着いてはいけません！'
+      else
+        puts ("#{nen[0]}#{td.year - 2018}年#{td.month}月 : #{nen_y}")
       end
+    rescue StandardError => e
+      puts e.backtrace
     end
   end
 
@@ -138,38 +116,16 @@ class HimekuriClass
   def wahugetsu_web
     td = Date.today
     nen = %w[令和]
+    nen_y = %w[無 睦月 如月 弥生 卯月 皐月 水無月 文月 葉月 長月 神無月 霜月 師走][td.month]
 
-    case td.month
-    when 1
-      "#{nen[0]}#{td.year - 2018}年#{td.month}月 : 睦月"
-    when 2
-      "#{nen[0]}#{td.year - 2018}年#{td.month}月 : 如月"
-    when 3
-      "#{nen[0]}#{td.year - 2018}年#{td.month}月 : 弥生"
-    when 4
-      "#{nen[0]}#{td.year - 2018}年#{td.month}月 : 卯月"
-    when 5
-      "#{nen[0]}#{td.year - 2018}年#{td.month}月 : 皐月"
-    when 6
-      "#{nen[0]}#{td.year - 2018}年#{td.month}月 : 水無月"
-    when 7
-      "#{nen[0]}#{td.year - 2018}年#{td.month}月 : 文月"
-    when 8
-      "#{nen[0]}#{td.year - 2018}年#{td.month}月 : 葉月"
-    when 9
-      "#{nen[0]}#{td.year - 2018}年#{td.month}月 : 長月"
-    when 10
-      "#{nen[0]}#{td.year - 2018}年#{td.month}月 : 神無月"
-    when 11
-      "#{nen[0]}#{td.year - 2018}年#{td.month}月 : 霜月"
-    when 12
-      "#{nen[0]}#{td.year - 2018}年#{td.month}月 : 師走"
-    else
-      begin
-        raise 'あり得ない数時の月です!'
-      rescue StandardError => e
-        puts e.cause.message
+    begin
+      if ("#{td.month}".to_i).zero?
+        raise '「無」に辿り着いてはいけません！'
+      else
+        ("#{nen[0]}#{td.year - 2018}年#{td.month}月 : #{nen_y}")
       end
+    rescue StandardError => e
+      e.backtrace
     end
   end
 
