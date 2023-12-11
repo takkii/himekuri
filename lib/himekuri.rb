@@ -62,7 +62,7 @@ class HimekuriClass
   def wahugetsu_print
     td = Date.today
     nen = %w[令和]
-    nen_y = %w[無 睦月 如月 弥生 卯月 皐月 水無月 文月 葉月 長月 神無月 霜月 師走][(td.month + 1)]
+    nen_y = %w[無 睦月 如月 弥生 卯月 皐月 水無月 文月 葉月 長月 神無月 霜月 師走][td.month]
 
     begin
       if (td.month + 1).zero?
@@ -114,6 +114,10 @@ class HimekuriClass
   end
 
   def wahugetsu_web
+    td = Date.today
+    nen = %w[令和]
+    nen_y = %w[無 睦月 如月 弥生 卯月 皐月 水無月 文月 葉月 長月 神無月 霜月 師走][td.month]
+
     begin
       if (td.month + 1).zero?
         raise '「無」に辿り着いてはいけません！'
