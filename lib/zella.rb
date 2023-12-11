@@ -20,11 +20,11 @@ class Zella
 
     # zella calc
     calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
-    youbi = %w[日 月 火 水 木 金 土][calc]
+    week = %w[日 月 火 水 木 金 土][calc]
 
     # begin ~ rescue ~ ensure.
     begin
-      puts "#{year}年#{month}月#{day}日 : #{youbi}曜日"
+      puts "#{year}年#{month}月#{day}日 : #{week}曜日"
     rescue StandardError => e
       puts e.backtrace
     end
