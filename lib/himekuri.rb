@@ -65,13 +65,13 @@ class HimekuriClass
     nen_y = %w[無 睦月 如月 弥生 卯月 皐月 水無月 文月 葉月 長月 神無月 霜月 師走][td.month]
 
     begin
-      if (td.month + 1).zero?
+      if ("#{td.month}".to_i).zero?
         raise '「無」に辿り着いてはいけません！'
       else
         puts ("#{nen[0]}#{td.year - 2018}年#{td.month}月 : #{nen_y}")
       end
     rescue StandardError => e
-      puts e.cause.message
+      puts e.backtrace
     end
   end
 
@@ -119,13 +119,13 @@ class HimekuriClass
     nen_y = %w[無 睦月 如月 弥生 卯月 皐月 水無月 文月 葉月 長月 神無月 霜月 師走][td.month]
 
     begin
-      if (td.month + 1).zero?
+      if ("#{td.month}".to_i).zero?
         raise '「無」に辿り着いてはいけません！'
       else
         ("#{nen[0]}#{td.year - 2018}年#{td.month}月 : #{nen_y}")
       end
     rescue StandardError => e
-      e.cause.message
+      e.backtrace
     end
   end
 
