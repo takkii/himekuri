@@ -42,7 +42,7 @@ begin
   elsif one.match?(w)
     HimekuriClass.new.wahugetsu_print
   elsif one.match?(z)
-    Zella.formula
+    Zella.formula_print
   else
     puts '実行中のコマンドは存在しません !'
   end
