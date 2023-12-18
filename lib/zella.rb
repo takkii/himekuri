@@ -10,9 +10,9 @@ class Zella
     td = Date.today
 
     # use Import.
-    year = (td.year).to_i
-    month = (td.month).to_i
-    day = (td.day).to_i
+    year = td.year.to_i
+    month = td.month.to_i
+    day = td.day.to_i
 
     # use Calc.
     calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
@@ -32,9 +32,9 @@ class Zella
     td = Date.today
 
     if ARGV[1].nil?
-      year = (td.year).to_i
-      month = (td.month).to_i
-      day = (td.day).to_i
+      year = td.year.to_i
+      month = td.month.to_i
+      day = td.day.to_i
     else
       year = ARGV[1].to_i
       month = ARGV[2].to_i
