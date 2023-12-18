@@ -6,13 +6,13 @@ source 'https://rubygems.org'
 gem 'bundler'
 
 # Unit Test
+gem 'debug'
 gem 'minitest'
 gem 'minitest-runners'
 gem 'rake'
 gem 'rspec'
 gem 'tanraku'
-gem 'debug'
 
 # Windows platform
-gem 'psych' , '5.0.1' if Gem.win_platform?
-gem 'stringio' , '3.0.4' if Gem.win_platform?
+gem 'psych', '5.0.1' if Gem.win_platform?
+gem 'stringio', '3.0.4' if Gem.win_platform?
