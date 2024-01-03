@@ -12,7 +12,3 @@ gem 'minitest-runners'
 gem 'rake'
 gem 'rspec'
 gem 'tanraku'
-
-# Windows platform
-gem 'psych', '5.0.1' if Gem.win_platform?
-gem 'stringio', '3.0.4' if Gem.win_platform?
