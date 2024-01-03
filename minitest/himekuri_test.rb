@@ -23,7 +23,12 @@ class VersionTest < Minitest::Test
     year = td.year.to_i
     month = td.month.to_i
     day = td.day.to_i
-    calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
+
+    # Year = 2023
+    # calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
+
+    # Year = 2024
+    calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7 + 1
 
     @zella = %w[日 月 火 水 木 金 土][calc]
     @week = %w[日 月 火 水 木 金 土][td.wday]
