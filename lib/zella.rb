@@ -14,8 +14,11 @@ class Zella
     month = td.month.to_i
     day = td.day.to_i
 
-    # Year = 2024
-    calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7 + 1
+    if year % 4 == 0
+      calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7 + 1
+    else
+      calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
+    end
 
     week = %w[日 月 火 水 木 金 土][calc]
 
@@ -42,8 +45,11 @@ class Zella
       day = ARGV[3].to_i
     end
 
-    # Year = 2024
-    calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7 + 1
+    if year % 4 == 0
+      calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7 + 1
+    else
+      calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
+    end
 
     week = %w[日 月 火 水 木 金 土][calc]
 
