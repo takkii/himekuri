@@ -30,7 +30,7 @@ class VersionTest < Minitest::Test
       calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
     end
 
-    @zella = %w[日 月 火 水 木 金 土][calc]
+    @zella = %w[日 月 火 水 木 金 土 日][calc]
     @week = %w[日 月 火 水 木 金 土][td.wday]
 
     assert_equal(@zella, @week)
