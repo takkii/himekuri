@@ -14,7 +14,16 @@ class Zella
     month = td.month.to_i
     day = td.day.to_i
 
+    # 西暦が 4 で割り切れる年はうるう年とする
     if year % 4 == 0
+      calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7 + 1
+
+    # 西暦が 100 でも割り切れる年はうるう年としない
+    elsif year % 100 == 0
+      calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
+
+    # 西暦が 400 でも割り切れる年はうるう年とする
+    elsif year % 400 == 0
       calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7 + 1
     else
       calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
