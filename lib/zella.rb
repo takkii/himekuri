@@ -65,7 +65,7 @@ class Zella
       calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
     end
 
-    week = %w[日 月 火 水 木 金 土][calc]
+    week = %w[日 月 火 水 木 金 土 日][calc]
 
     # begin ~ rescue ~ ensure.
     begin
