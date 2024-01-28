@@ -15,7 +15,7 @@ class Zella
     day = td.day.to_i
 
     if year % 4 == 0 && year % 100 != 0 || year % 400 == 0
-      calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 428) % 7
+      calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 428) % 7 + 1
     else
       calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
     end
