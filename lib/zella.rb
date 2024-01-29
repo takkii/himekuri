@@ -41,9 +41,9 @@ class Zella
       @@td.month.to_i
       @@td.day.to_i
     else
-      @@td.year.to_i = ARGV[1].to_i
-      @@td.month.to_i = ARGV[2].to_i
-      @@td.day.to_i = ARGV[3].to_i
+      year = ARGV[1].to_i
+      month = ARGV[2].to_i
+      day = ARGV[3].to_i
     end
 
     # if zella uru calc
