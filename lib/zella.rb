@@ -8,7 +8,7 @@ class Zella
   @@td = Date.today
 
   # zella uru calc
-  @@calc_uru = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (@@month + 1)) / 10 + day) - 427) % 7
+  @@calc_uru = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 427) % 7
 
   # zella calc
   @@calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
