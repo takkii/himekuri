@@ -37,9 +37,9 @@ class Zella
   def self.formula_print
 
     if ARGV[1].nil?
-      @@td.year.to_i
-      @@td.month.to_i
-      @@td.day.to_i
+      year = @@td.year.to_i
+      month = @@td.month.to_i
+      day = @@td.day.to_i
     else
       year = ARGV[1].to_i
       month = ARGV[2].to_i
