@@ -4,30 +4,27 @@ require 'date'
 
 # zella formula Instance.
 class Zella
-  # Today
-  @@td = Date.today
-
-  # zella uru calc
-  @@calc_uru = ((365 * @@td.year.to_i + @@td.year.to_i / 4 - @@td.year.to_i / 100 + @@td.year.to_i / 400 + (306 * (@@td.month.to_i + 1)) / 10 + @@td.day.to_i) - 427) % 7
-
-  # zella calc
-  @@calc = (@@td.year.to_i + @@td.year.to_i / 4 - @@td.year.to_i / 100 + @@td.year.to_i / 400 + (13 * @@td.month.to_i + 8) / 5 + @@td.day.to_i) % 7
-
   # use Web.
   def self.formula
+    # Today
+    td = Date.today
 
-    # if zella uru calc
-    if @@td.year.to_i % 4 == 0 && @@td.year.to_i % 100 != 0 || @@td.year.to_i % 400 == 0
-      @@calc_uru
-      week = %w[日 月 火 水 木 金 土][@@calc_uru]
+    # use Import.
+    year = td.year.to_i
+    month = td.month.to_i
+    day = td.day.to_i
+
+    if year % 4 == 0 && year % 100 != 0 || year % 400 == 0
+      calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 427) % 7
     else
-      @@calc
-      week = %w[日 月 火 水 木 金 土][@@calc]
+      calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
     end
+
+    week = %w[日 月 火 水 木 金 土][calc]
 
     # Result.
     begin
-      "#{@@td.year.to_i}年#{@@td.month.to_i}月#{@@td.day.to_i}日 : #{week}曜日"
+      "#{year}年#{month}月#{day}日 : #{week}曜日"
     rescue StandardError => e
       e.backtrace
     end
@@ -35,29 +32,30 @@ class Zella
 
   # use Console.
   def self.formula_print
+    # Today
+    td = Date.today
 
     if ARGV[1].nil?
-      @@td.year.to_i
-      @@td.month.to_i
-      @@td.day.to_i
+      year = td.year.to_i
+      month = td.month.to_i
+      day = td.day.to_i
     else
-      @@td.year.to_i = ARGV[1].to_i
-      @@td.month.to_i = ARGV[2].to_i
-      @@td.day.to_i = ARGV[3].to_i
+      year = ARGV[1].to_i
+      month = ARGV[2].to_i
+      day = ARGV[3].to_i
     end
 
-    # if zella uru calc
-    if @@td.year.to_i % 4 == 0 && @@td.year.to_i % 100 != 0 || @@td.year.to_i % 400 == 0
-      @@calc_uru
-      week = %w[日 月 火 水 木 金 土][@@calc_uru]
+    if year % 4 == 0 && year % 100 != 0 || year % 400 == 0
+      calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 427) % 7
     else
-      @@calc
-      week = %w[日 月 火 水 木 金 土][@@calc]
+      calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
     end
+
+    week = %w[日 月 火 水 木 金 土][calc]
 
     # begin ~ rescue ~ ensure.
     begin
-      puts "#{@@td.year.to_i}年#{@@td.month.to_i}月#{@@td.day.to_i}日 : #{week}曜日"
+      puts "#{year}年#{month}月#{day}日 : #{week}曜日"
     rescue StandardError => e
       puts e.backtrace
     end
