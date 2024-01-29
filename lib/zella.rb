@@ -27,7 +27,7 @@ class Zella
 
     # Result.
     begin
-      "#{@@td.year.to_i}年#{@@td.month.to_i}月#{@@td.day.to_i}日 : #{week}曜日"
+      "#{year}年#{month}月#{day}日 : #{week}曜日"
     rescue StandardError => e
       e.backtrace
     end
@@ -57,7 +57,7 @@ class Zella
 
     # begin ~ rescue ~ ensure.
     begin
-      puts "#{@@td.year.to_i}年#{@@td.month.to_i}月#{@@td.day.to_i}日 : #{week}曜日"
+      puts "#{year}年#{month}月#{day}日 : #{week}曜日"
     rescue StandardError => e
       puts e.backtrace
     end
