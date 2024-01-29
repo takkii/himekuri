@@ -4,27 +4,23 @@ require 'date'
 
 # zella formula Instance.
 class Zella
-
   # use Web.
   def self.formula
+    # Today
+    td = Date.today
 
-  # Today
-  td = Date.today
+    # use Import.
+    year = td.year.to_i
+    month = td.month.to_i
+    day = td.day.to_i
 
-  # zella uru calc
-  calc_uru = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 427) % 7
-
-  # zella calc
-  calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
-
-    # if zella uru calc
     if year % 4 == 0 && year % 100 != 0 || year % 400 == 0
-      calc_uru
-      week = %w[日 月 火 水 木 金 土][@@calc_uru]
+      calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 427) % 7
     else
-      calc
-      week = %w[日 月 火 水 木 金 土][@@calc]
+      calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
     end
+
+    week = %w[日 月 火 水 木 金 土][calc]
 
     # Result.
     begin
@@ -36,15 +32,8 @@ class Zella
 
   # use Console.
   def self.formula_print
-
-  # Today
-  td = Date.today
-
-  # zella uru calc
-  calc_uru = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 427) % 7
-
-  # zella calc
-  calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
+    # Today
+    td = Date.today
 
     if ARGV[1].nil?
       year = td.year.to_i
@@ -56,14 +45,13 @@ class Zella
       day = ARGV[3].to_i
     end
 
-    # if zella uru calc
     if year % 4 == 0 && year % 100 != 0 || year % 400 == 0
-      calc_uru
-      week = %w[日 月 火 水 木 金 土][@@calc_uru]
+      calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 427) % 7
     else
-      calc
-      week = %w[日 月 火 水 木 金 土][@@calc]
+      calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
     end
+
+    week = %w[日 月 火 水 木 金 土][calc]
 
     # begin ~ rescue ~ ensure.
     begin
