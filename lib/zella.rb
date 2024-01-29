@@ -9,9 +9,6 @@ class Zella
     # Today
     td = Date.today
 
-    # Today
-    td = Date.today
-
     # use Import.
     if ARGV[1].nil?
       year = td.year.to_i
