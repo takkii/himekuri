@@ -165,7 +165,7 @@ class HimekuriClass
     puts ''
     puts 'koyomi -z'
     puts ''
-    Zella.formula_print
+    puts Zella.formula
     puts ''
     puts 'HELP'.center(60, '-')
   end
