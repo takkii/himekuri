@@ -24,13 +24,13 @@ class VersionTest < Minitest::Test
     month = td.month.to_i
     day = td.day.to_i
 
-    if year % 4 == 0
-      calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7 + 1
+    if
+      calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 427) % 7
     else
       calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
     end
 
-    @zella = %w[日 月 火 水 木 金 土 日][calc]
+    @zella = %w[日 月 火 水 木 金 土][calc]
     @week = %w[日 月 火 水 木 金 土][td.wday]
 
     assert_equal(@zella, @week)
