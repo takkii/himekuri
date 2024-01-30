@@ -20,11 +20,15 @@ class Zella
       day = ARGV[3].to_i
     end
 
-    if year % 4 == 0 && year % 100 != 0 || year % 400 == 0
+  if year % 4 == 0 && year % 100 != 0 || year % 400 == 0
+    if "#{td.month}".match?(/^[2][4]|[6]|[9]$/)
+      calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 428) % 7
+    else
       calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 427) % 7
     else
       calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
     end
+  end
 
     week = %w[日 月 火 水 木 金 土][calc]
 
