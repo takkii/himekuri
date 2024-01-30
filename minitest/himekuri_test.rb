@@ -24,8 +24,14 @@ class VersionTest < Minitest::Test
     month = td.month.to_i
     day = td.day.to_i
 
-    if
-      calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 427) % 7
+    if year % 4 == 0 && year % 100 != 0 || year % 400 == 0
+      if "#{month}".match?(/^[2]$/)
+        calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 426) % 7
+      elsif "#{month}".match?(/^[11]$/)
+        calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 427) % 7
+      else
+        calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 428) % 7
+      end
     else
       calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
     end
