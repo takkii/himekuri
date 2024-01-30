@@ -21,9 +21,9 @@ class Zella
     end
 
     if year % 4 == 0 && year % 100 != 0 || year % 400 == 0
-      if "#{month}".match?(/^[2]|[6]|[9]$/)
+      if "#{month}".match?(/^[2]|[10]$/)
         calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 426) % 7
-      elsif "#{month}".match?(/^[3]|[4]$/)
+      elsif "#{month}".match?(/^[3]|[4]|[6]|[7]|[8]|[9]|[11]|[12]$/)
         calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 428) % 7
       else
         calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 427) % 7
