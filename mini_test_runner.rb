@@ -2,17 +2,18 @@
 
 require "#{File.dirname(__FILE__)}/req/minitest"
 
-# Default encoding utf8, Encoding change here.
-def encoding_style
-  Encoding.default_internal = 'UTF-8'
-  Encoding.default_external = 'UTF-8'
-end
-
 # The new instance will be deleted after process ends.
 class MiniTestFile
   attr_reader :mini_test
 
+  # Defaut encoding utf8, Encoding change here.
+  def encoding_style
+    Encoding.default_internal = 'UTF-8'
+    Encoding.default_external = 'UTF-8'
+  end
+
   def initialize
+    encoding_style
     @mini_test = Mini(true, '/GitHub/himekuri/minitest')
   end
 
@@ -25,8 +26,7 @@ end
 begin
   MiniTestFile.new.remove
 rescue StandardError => e
-  puts e.backtrace
-  encoding_style.tanraku_exit
+  puts e.backtrace.tanraku_exit
 ensure
   GC.compact
 end
