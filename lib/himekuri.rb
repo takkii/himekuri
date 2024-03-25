@@ -132,6 +132,11 @@ class HimekuriClass
     puts Himekuri::VERSION
   end
 
+  def self.zella_ts
+    nodejs_path = "node" + " " + "#{File.dirname(__FILE__) + '/zella.js'}".to_s
+    Open3.capture3(nodejs_path)
+  end
+
   def help
     puts 'HELP'.center(60, '-')
     puts ''
@@ -166,6 +171,11 @@ class HimekuriClass
     puts 'koyomi -z'
     puts ''
     puts Zella.formula
+    puts ''
+    puts ''
+    puts 'koyomi -z'
+    puts ''
+    puts HimekuriClass.zella_ts
     puts ''
     puts 'HELP'.center(60, '-')
   end
