@@ -4,6 +4,7 @@ lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'date'
+require 'open3'
 require 'time'
 require 'himekuri/version'
 require 'zella'
@@ -132,6 +133,12 @@ class HimekuriClass
     puts Himekuri::VERSION
   end
 
+  def self.zella_ts
+    nodejs_path = "node" + " " + "#{File.dirname(__FILE__) + '/zella.js'}".to_s
+    stdout_js, stderr_js, status_js = Open3.capture3(nodejs_path)
+    stdout_js
+  end
+
   def help
     puts 'HELP'.center(60, '-')
     puts ''
@@ -166,6 +173,10 @@ class HimekuriClass
     puts 'koyomi -z'
     puts ''
     puts Zella.formula
+    puts ''
+    puts 'koyomi -t'
+    puts ''
+    puts HimekuriClass.zella_ts
     puts ''
     puts 'HELP'.center(60, '-')
   end

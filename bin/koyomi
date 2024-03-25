@@ -20,6 +20,7 @@ begin
   h = /\A-h\z/
   w = /\A-w\z/
   z = /\A-z\z/
+  t = /\A-t\z/
 
   one = ARGV[0]
 
@@ -43,6 +44,8 @@ begin
     HimekuriClass.new.wahugetsu_print
   elsif one.match?(z)
     puts Zella.formula
+  elsif one.match?(t)
+    puts HimekuriClass.zella_ts
   else
     puts '実行中のコマンドは存在しません !'
   end
