@@ -174,7 +174,7 @@ class HimekuriClass
     puts ''
     puts Zella.formula
     puts ''
-    puts 'koyomi -z'
+    puts 'koyomi -t'
     puts ''
     puts HimekuriClass.zella_ts
     puts ''
