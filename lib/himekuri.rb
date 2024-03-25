@@ -135,7 +135,8 @@ class HimekuriClass
 
   def self.zella_ts
     nodejs_path = "node" + " " + "#{File.dirname(__FILE__) + '/zella.js'}".to_s
-    Open3.capture3(nodejs_path)
+    stdout_js, stderr_js, status_js = Open3.capture3(nodejs_path)
+    stdout_js
   end
 
   def help
