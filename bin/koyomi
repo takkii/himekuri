@@ -21,6 +21,7 @@ begin
   w = /\A-w\z/
   z = /\A-z\z/
   t = /\A-t\z/
+  p = /\A-p\z/
 
   one = ARGV[0]
 
@@ -46,6 +47,8 @@ begin
     puts Zella.formula
   elsif one.match?(t)
     puts HimekuriClass.zella_ts
+  elsif one.match?(p)
+    puts HimekuriClass.zella_py
   else
     puts '実行中のコマンドは存在しません !'
   end
