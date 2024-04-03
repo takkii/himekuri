@@ -139,6 +139,12 @@ class HimekuriClass
     stdout_js
   end
 
+  def self.zella_py
+    nodejs_path = "python" + " " + "#{File.dirname(__FILE__) + '/timestamp.py'}".to_s
+    stdout_py, stderr_py, status_py = Open3.capture3(nodejs_path)
+    stdout_py
+  end
+
   def help
     puts 'HELP'.center(60, '-')
     puts ''
@@ -177,6 +183,10 @@ class HimekuriClass
     puts 'koyomi -t'
     puts ''
     puts HimekuriClass.zella_ts
+    puts ''
+    puts 'koyomi -p'
+    puts ''
+    puts HimekuriClass.zella_py
     puts ''
     puts 'HELP'.center(60, '-')
   end
