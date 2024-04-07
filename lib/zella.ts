@@ -34,7 +34,7 @@ class Himekuri{
     }
 
     this.round_calc = Math.round(this.calc)
-    this.week = ["Sun", "Mon", "Tues", "Wedness", "Thurs", "Fri", "Satur"]
+    this.week = ["Sun", "Mon", "Tues", "Wedness", "Thurs", "Fri", "Satur", "Sun"]
     this.cl_wk = (this.week[this.round_calc])
 }
         getHimekuri(){
