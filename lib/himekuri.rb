@@ -180,6 +180,10 @@ class HimekuriClass
     puts ''
     puts Zella.formula
     puts ''
+    puts 'koyomi -z 2024 4 11'
+    puts ''
+    puts '2024年4月11日 : 木曜日'
+    puts ''
     puts 'koyomi -t'
     puts ''
     puts HimekuriClass.zella_ts
