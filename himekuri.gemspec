@@ -17,11 +17,11 @@ Gem::Specification.new do |spec|
   spec.description   = '日本語版、日めくり。'
   spec.homepage      = 'https://github.com/takkii/himekuri'
   spec.license       = 'MIT'
-  
+
   # ruby || rubygems, VERSION
   spec.required_ruby_version = ['>= 3.0']
   spec.rubygems_version = ['>= 3.5']
-  
+
   # git
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
