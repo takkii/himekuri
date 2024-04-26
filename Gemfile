@@ -8,7 +8,5 @@ gem 'bundler'
 # Unit Test
 gem 'debug'
 gem 'minitest'
-gem 'minitest-runners'
 gem 'rake'
-gem 'tanraku'
 gem 'simplecov'
