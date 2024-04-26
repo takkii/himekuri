@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 # --------------------------------------
-require 'minitest'
+require 'date'
 require 'minitest/autorun'
-require 'minitest/unit'
-require 'minitest/runner'
-require 'simplecov'
+require 'himekuri/version'
 # --------------------------------------
