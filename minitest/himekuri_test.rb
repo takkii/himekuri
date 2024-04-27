@@ -17,25 +17,14 @@ class VersionTest < Minitest::Test
 
   def test_day_of_week
     td = Date.today
-
     year = td.year.to_i
     month = td.month.to_i
     day = td.day.to_i
 
-    if year % 4 == 0 && year % 100 != 0 || year % 400 == 0
-      if "#{month}".match?(/^[2]$/)
-        calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 426) % 7
-      elsif "#{month}".match?(/^11$/)
-        calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 427) % 7
-      else
-        calc = ((365 * year + year / 4 - year / 100 + year / 400 + (306 * (month + 1)) / 10 + day) - 428) % 7
-      end
-    else
-      calc = (year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + day) % 7
-    end
+    week_calc = %w[日 月 火 水 木 金 土][td.wday]
+    @week = "#{year}年#{month}月#{day}日 : #{week_calc}曜日"
 
-    @zella = %w[日 月 火 水 木 金 土 日][calc]
-    @week = %w[日 月 火 水 木 金 土][td.wday]
+    @zella = Zella.formula
 
     assert_equal(@zella, @week)
   end
