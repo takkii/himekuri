@@ -3,9 +3,8 @@
 source 'https://rubygems.org'
 
 # Specify your gem's dependencies in himekuri.gemspec
+gem 'bmi'
 gem 'bundler'
-
-# Unit Test
 gem 'debug'
 gem 'minitest'
 gem 'rake'
