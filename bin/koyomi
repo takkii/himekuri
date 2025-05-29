@@ -6,12 +6,10 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-Encoding.default_internal = 'UTF-8'
+require "#{File.dirname(__FILE__)}/../req/koyomi"
 
 begin
-  require 'himekuri'
-  require 'himekuri/version'
-  require 'zella'
+  encoding_style
 
   v = /\A-v\z/
   r = /\A-r\z/

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'date'
+require "#{File.dirname(__FILE__)}/../req/zella"
 
 # zella formula Instance.
 class Zella

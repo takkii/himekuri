@@ -3,11 +3,7 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'date'
-require 'open3'
-require 'time'
-require 'himekuri/version'
-require 'zella'
+require "#{File.dirname(__FILE__)}/../req/himekuri"
 
 class HimekuriClass
   def himekuri_print
