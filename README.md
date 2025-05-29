@@ -6,10 +6,10 @@
 
 日本語で令和対応もしてあります。
 
-#### How to Use
+#### どのように使いますか？
 
-Wiki page, [here](https://github.com/takkii/himekuri/wiki/manual).
+取説は、 [こちら](https://github.com/takkii/himekuri/wiki/manual).
 
-### License
+### ライセンス
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+[MIT License](https://opensource.org/licenses/MIT)です。
