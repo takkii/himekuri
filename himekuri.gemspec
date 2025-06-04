@@ -25,10 +25,10 @@ Gem::Specification.new do |spec|
   spec.required_rubygems_version = '~> 3.6.9'
 
   # Needing to rubygems
-  s.add_runtime_dependency('bundler', '~> 2.6')
-  s.add_runtime_dependency('rake', '~> 13.2')
-  s.add_runtime_dependency('minitest', '~> 5.25')
-  s.add_runtime_dependency('simplecov', '~> 0.22')
+  spec.add_runtime_dependency('bundler', '~> 2.6')
+  spec.add_runtime_dependency('rake', '~> 13.2')
+  spec.add_runtime_dependency('minitest', '~> 5.25')
+  spec.add_runtime_dependency('simplecov', '~> 0.22')
 
   # git
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^mini_test/}) }
