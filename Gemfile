@@ -3,9 +3,6 @@
 source 'https://rubygems.org'
 
 # Specify your gem's dependencies in himekuri.gemspec
-gem 'bmi'
-gem 'bundler'
-gem 'debug'
-gem 'minitest'
-gem 'rake'
-gem 'simplecov'
+source "https://rubygems.pkg.github.com/takkii" do
+  gem "bmi", "1.0.3.1.pre.2025.05.29"
+end
