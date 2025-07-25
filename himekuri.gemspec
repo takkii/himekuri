@@ -4,6 +4,7 @@ lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'himekuri/version'
+require 'himekuri/gem_version'
 
 Gem::Specification.new do |spec|
   spec.required_rubygems_version = Gem::Requirement.new(">= 0") if spec.respond_to? :required_rubygems_version=
@@ -22,7 +23,7 @@ Gem::Specification.new do |spec|
 
   # required RUBY / RUBYGEMS VERSION
   spec.required_ruby_version = ['>= 3.0']
-  spec.required_rubygems_version = '~> 3.6.9'
+  spec.required_rubygems_version = RbGemversion::VERSION
 
   # Needing to rubygems
   spec.add_runtime_dependency('bundler', '~> 2.6')
