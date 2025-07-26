@@ -7,12 +7,12 @@ require 'himekuri/version'
 require 'himekuri/gem_version'
 
 Gem::Specification.new do |spec|
-  spec.required_rubygems_version = Gem::Requirement.new(">= 0") if spec.respond_to? :required_rubygems_version=
+  spec.required_rubygems_version = '~> 3.6.9' if spec.respond_to? RbGemversion::VERSION
 
   # Info
   spec.name          = 'himekuri'
   spec.version       = Himekuri::VERSION
-  spec.authors       = ['takkii']
+  spec.authors       = ["Takayuki Kamiyama"]
   spec.email         = ['karuma.reason@gmail.com']
 
   # profile
